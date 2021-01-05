@@ -6,6 +6,7 @@
     <title>Microfrontend</title>
     
     <meta name="importmap-type" content="systemjs-importmap">
+    
     <script type="systemjs-importmap" src="/importmap.json"></script>
 
     <% if (process.env.NODE_ENV === 'development') { %>
@@ -26,7 +27,7 @@
     </script>
     <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
   </body>
-  
+
   <style type="text/css">
     .snackbar-container {
       transition: all 500ms ease;

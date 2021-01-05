@@ -9,7 +9,7 @@
     "prettier": "prettier --write './**'",
     "build": "webpack --mode=production"
   },
-  "author": "Squire Johnson",
+  "author": "squireaj",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.9.6",
