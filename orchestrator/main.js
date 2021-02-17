@@ -7,12 +7,14 @@ const apps = [
   {
     name: 'app-one',
     app: () => System.import('app-one'),
-    activeWhen: location => location.pathname.startsWith('/')
+    activeWhen: (location) => {
+      return location.pathname.startsWith('/') && !location.pathname.startsWith('/app-two')
+    }
   },
   {
     name: 'app-two',
     app: () => System.import('app-two'),
-    activeWhen: location => location.pathname.startsWith('/')
+    activeWhen: location => location.pathname.startsWith('/app-two')
   }
 ]
 
