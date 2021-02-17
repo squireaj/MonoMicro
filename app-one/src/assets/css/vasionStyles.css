@@ -1,0 +1,65 @@
+button {
+  font-family: Gotham;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: center;
+}
+body {
+  font-family: Gotham;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.07;
+  letter-spacing: normal;
+  text-align: left;
+}
+.Rectangle-1858 {
+  width: 1920px;
+  height: 56px;
+  background-color: #3982ea;
+}
+.XLOGIC {
+  width: 97px;
+  height: 26px;
+  color: #fff;
+  font-family: Gotham;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.08;
+  text-align: left;
+}
+.XLOGIC .text-style-1 {
+  font-family: Gotham;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.08;
+  letter-spacing: normal;
+  text-align: left;
+}
+.pl-flex-vertical-center {
+  display: flex;
+  align-items: center;
+}
+.pl-flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+.pl-flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+.pl-searchInput {
+  width: 400px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-style: solid;
+  border: none;
+}

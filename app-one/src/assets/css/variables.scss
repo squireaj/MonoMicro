@@ -1,0 +1,153 @@
+@import "~@/assets/css/fonts.scss";
+
+$nav-bar-height: 56px;
+$main-side-nav-width: 256px;
+$sub-nav-width: 304px;
+$sub-nav-color: #7e8286;
+$shadow: rgba(0, 0, 0, 0.2);
+$font-family-bold: 'Archivo Bold';
+$font-family-black: 'Archivo Bold';
+$font-family-medium: 'Archivo Medium';
+$font-family-book: 'Archivo';
+$font-family-eurostar: 'Eurostar Regular Extended';
+$font-family-accent: 'KoratakiW01-Book';
+
+$input-text: #172027;
+$darkModeHighlight: #c2c4c5;
+$darkModeDarkHighlight: #292929;
+$darkModeBackground: #0c0c0c; 
+$error-red: #cb0c0c;
+$plumb-500: #330c32;
+$plumb-400: #3a0e39;
+$plumb-300: #400f3f;
+$plumb-200: #8c6f8c;
+$plumb-100: #b39fb2;
+$plumb-75: #d9cfd9;
+$plumb-50: #ece7ec;
+$orange-500: #cc3902;
+$orange-400: #e64002;
+$orange-300: #ff4702;
+$orange-200: #ff9167;
+$orange-100: #ffb59a;
+$orange-75: #ffdacc;
+$orange-50: #ffede6;
+$blue-500: #0056b6;
+$blue-400: #0060cc;
+$blue-300: #006be3;
+$blue-200: #66a6ee;
+$blue-100: #99c4f4;
+$blue-75: #cce1f9;
+$blue-50: #e6f0fc;
+$tan-500: #c0a286;
+$tan-400: #d8b796;
+$tan-300: #f0cba7;
+$tan-200: #f6e0ca;
+$tan-100: #f9eadc;
+$tan-75: #fcf5ed;
+$tan-50: #fefaf6;
+$grey-700: #252626;
+$grey-600: #4a4c4d;
+$grey-500: #707273;
+$grey-400: #95989a;
+$grey-300: #bbbec1;
+$grey-200: #c9cbcd;
+$grey-100: #d6d8da;
+$grey-75: #e4e5e6;
+$grey-50: #f1f2f3;
+$grey-25: #f8f9f9;
+$yellow-500: #cc9c08;
+$yellow-400: #e6b009;
+$yellow-300: #ffc30a;
+$yellow-200: #ffdb6c;
+$yellow-100: #ffe79d;
+$yellow-75: #fff3ce;
+$yellow-50: #fff9e7;
+$yellow-folder: #ffab00;
+$red-500: #b60000;
+$red-400: #cc0000;
+$red-300: #e30000;
+$red-200: #ee6666;
+$red-100: #f49999;
+$red-75: #f9cccc;
+$red-50: #fce6e6;
+$tan: #ebc7a3;
+$green-500: #00b64c;
+$green-400: #00cc56;
+$green-300: #00e35f;
+$green-200: #66ee9f;
+$green-100: #99f4bf;
+$green-75: #ccf9df;
+$green-50: #e6fcef;
+$white: #ffffff;
+$white-12: rgba(255, 255, 255, 0.24);
+$white-24: rgba(255, 255, 255, 0.24);
+$white-48: rgba(255, 255, 255, 0.48);
+$box-shadow: rgba(22, 23, 24, 0.15);
+$divider-light-grey: #e1e8ed;
+
+$tablet: 1280px;
+$phone: 490px;
+
+
+@mixin Headline {
+  font-family: $font-family-bold;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.08;
+  text-align: left;
+}
+
+@mixin SubHeadline {
+  font-family: $font-family-bold;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+@mixin SubtitleActive {
+  font-family: $font-family-medium;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.13;
+  text-align: left;
+}
+
+@mixin Subtitle {
+  font-family: $font-family-book;
+  font-size: 14px;
+  line-height: 1.13;
+  text-align: left;
+}
+
+@mixin Body2 {
+  font-family: $font-family-medium;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.07;
+  text-align: left;
+}
+
+@mixin SECTION-HEADER {
+  font-family: $font-family-medium;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.08;
+  text-align: left;
+}
+
+$vasion-default-timing-function: cubic-bezier(.55, 0, .55, .2);
+
+ @mixin Text {
+    font-family: $font-family-book;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $grey-500;
+ }

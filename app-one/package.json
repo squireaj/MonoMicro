@@ -9,9 +9,13 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "printer-logic-components": "0.0.73",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
     "single-spa-vue": "^1.5.2",
     "systemjs-webpack-interop": "^1.1.0",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-loading-overlay": "^3.4.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.3.0",

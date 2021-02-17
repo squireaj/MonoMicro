@@ -1,0 +1,796 @@
+@import '~printer-logic-components/src/assets/css/variables.scss';
+@import "~vue-material/dist/theme/engine"; // Import the theme engine
+@import '@/assets/css/vasion-formio.scss';
+@import 'https://unpkg.com/formiojs@latest/dist/formio.full.min.css';
+
+@include md-register-theme("default", (
+  primary: $plumb-300, // The primary color of your brand
+  accent: $orange-300// The secondary color of your brand
+));
+
+@import "~vue-material/dist/components/MdTable/theme"; // Apply the theme
+
+body {
+  font-family: $font-family-book;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.07;
+  letter-spacing: normal;
+  text-align: left;
+  background-color: $grey-50;
+}
+.dark-mode {
+  .table-header {
+    background-color: #3f3f3f;
+    color: #e6e6e6;
+  }
+  .table-rows {
+    color: #e6e6e6;
+  }
+  .table-rows:hover {
+    background-color: black;
+    color: $grey-400;
+  }
+  background-color: $grey-700;
+  .vasion-lightest-gray-background{
+    background-color: #2b2b2b;
+  }
+  .vasion-lightest-gray-background:hover{
+    background-color: black;
+    color: $grey-400;
+  }
+  .vasion-drawer{
+    background-color: #180618 !important;
+    color: #e6e6e6;
+  }
+  .vasion-page-title {
+    color: #dadada
+  }
+  .white-theme {
+    background-color: #2b2b2b !important;
+    input { 
+      color: #c1c1c1;
+    }
+    #PlArrowDropDownIcon {
+      fill: #c1c1c1;
+    }
+  }
+  .list {
+    background-color: #070707 !important;
+  }
+}
+.inner-div {
+  padding-top: 8px;
+  margin-right: 8px;
+  margin-left: 16px;
+  text-align: center;
+}
+.top-margin {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.vasion-button-stack {
+  max-width: 152px;
+  margin: 38px 44px 44px 44px;
+  justify-content: center;
+  align-items: center;
+}
+
+.vasion-icon-disabled {
+  fill: $grey-300;
+}
+
+.vasion-menuIcon {
+  margin-left: -5px;
+  fill: $grey-400;
+  z-index: 4;
+}
+
+.vasion-iconButtonText {
+  margin-left: 8px;
+  margin-top: 4px;
+}
+
+input[type=time]::-webkit-clear-button {
+  display: none;
+}
+
+input[type=time]::-webkit-inner-spin-button {
+  position: relative;
+  top: 8px;
+  right: 11px;
+}
+
+.vasion-main-inner-div {
+  margin: 15px 15px 0px 15px
+}
+
+.vasion-top-nav {
+  height: 70px;
+  background-color: $white;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  border-bottom: 1px solid $grey-100;
+}
+
+.XLOGIC {
+  width: 97px;
+  height: 26px;
+  color: $white;
+  font-size: 24px;
+  line-height: 1.08;
+  text-align: left;
+}
+
+.XLOGICLarge {
+  width: 97px;
+  height: 26px;
+  color: $white;
+  font-size: 40px;
+  line-height: 1.08;
+  text-align: left;
+}
+
+.text-style-1 {
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.08;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.text-style-1-Large {
+  font-size: 40px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.08;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.vasion-drive-button {
+  @include SubtitleActive;
+  height: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+  text-align: left;
+  width: 95%;
+  border-radius: 4px;
+  padding-left: 8px;
+  cursor: pointer;
+  background-color: $white;
+  color: $grey-500;
+
+  &:hover, &:focus {
+    background-color: $orange-50;
+    color: $orange-300;
+    fill: $orange-300;
+  }
+
+  &:active {
+    background-color: $orange-75;
+    color: $orange-300;
+    fill: $orange-300;
+  }
+
+  &:disabled, &[disabled] {
+    background-color: $white;
+    color: $grey-400;
+    fill: $grey-400;
+  }
+
+  svg {
+    font-size: 22px;
+    margin-right: 10px;
+    line-height: 35px;
+    vertical-align: middle;
+  }
+
+  &.active {
+    background-color: $orange-50;
+    color: $orange-300;
+    fill: $orange-300;
+  }
+}
+
+.vasion-folder-browse-button {
+  @include SubtitleActive;
+  height: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+  text-align: left;
+  border-radius: 4px;
+  padding-left: 8px;
+  cursor: pointer;
+  background-color: $white;
+
+  font-family: $font-family-book;
+  font-size: 14px;
+  font-weight: normal;
+  color: $grey-400;
+  fill: $grey-400;
+
+  &:hover, &:focus {
+    background-color: $grey-75;
+    color: $grey-700;
+    fill: $grey-700;
+  }
+
+  &:active {
+    background-color: $grey-75;
+    color: $grey-700;
+    fill: $grey-700;
+  }
+
+  &:disabled, &[disabled] {
+    background-color: $white;
+    color: $grey-400;
+    fill: $grey-400;
+  }
+
+  svg {
+    font-size: 22px;
+    margin-right: 10px;
+    line-height: 35px;
+    vertical-align: middle;
+  }
+
+  &.active {
+    background-color: $grey-75;
+    color: $grey-700;
+    fill: $grey-700;
+  }
+}
+
+.vasion-loading-indicator {
+  z-index: 100;
+  height: 100vh;
+}
+.vasion-lightest-grey-background {
+  background-color: $grey-50;
+}
+.vasion-down-20 {
+  padding-top: 20px;
+}
+
+.vasion-menuText {
+  margin-left: 15px;
+  margin-top: 4px;
+}
+
+.vasion-flex {
+  display: flex;
+}
+
+.vasion-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.vasion-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.vasion-flex-vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.vasion-flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.vasion-flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.vasion-calc-height {
+  min-height: calc(100vh - 70px);
+}
+
+.vasion-main-nav-open {
+  width: calc(100vw - 256px);
+}
+
+.vasion-main-nav-mini-mode {
+  width: calc(100vw - 40px);
+}
+
+.vasion-main-nav-full-mode {
+  width: calc(100vw - 256px);
+}
+.vasion-home-mode {
+  width: 100vw;
+  background-color: $grey-50;
+}
+
+.vasion-drawer {
+  width: 256px;
+  background-color: $plumb-300;
+}
+
+ .vasion-drawer-mini {
+  width: 56px;
+}
+
+.vasion-remaining-after-two-subnavs {
+  // width: calc(100vw - 560px);
+  width: 100%;
+}
+
+.vasion-table-header-row {
+  background-color: $grey-100;
+}
+
+.vasion-input-label-top {
+  height: 12px;
+  font-family: $font-family-medium, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: $grey-400;
+  margin-bottom: 8px;
+  position: relative;
+  bottom: 2px;
+}
+
+.vasion-dark-label {
+  font-family: $font-family-bold;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $grey-700;
+}
+
+.vasion-html-table-header {
+  font-family: $font-family-book;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $grey-500;
+  margin-left: 16px;
+}
+
+
+.vasion-html-table-field {
+  font-family: $font-family-book;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $grey-500;
+  margin-left: 16px;
+}
+
+.vasion-page-title {
+  font-family: $font-family-bold;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $grey-500;
+  margin: auto;
+  text-align: left;
+}
+
+.vasion-page-subheader {
+  font-family: $font-family-medium;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $grey-500;
+}
+
+.vasion-page-subheader-light {
+  font-family: $font-family-medium;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $grey-400;
+}
+
+.vasion-large-message {
+  font-family: $font-family-bold;
+  font-size: 48px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: $grey-500;
+}
+
+.vasion-textarea {
+  width: 100%;
+  border-radius: 4px;
+  background-color: $grey-50;
+  font-family: $font-family-book;
+  font-size: 16px;
+  z-index: 12;
+  padding-left: 8px;
+  color: $input-text;
+}
+
+.vasion-textarea:focus{
+  outline: none;
+}
+
+// [class*="vasion-drawer"] {
+//   transition: .2s $vasion-default-timing-function;
+//   transition-property: width;
+//   will-change: width;
+// }
+
+// [class*="vasion-main-nav-full-mode"] {
+//   transition: .2s $vasion-default-timing-function;
+//   transition-property: width;
+//   will-change: width;
+// }
+
+.vasion-disable-pointer-event {
+  pointer-events: none;
+}
+
+.vasion-list-unstyled {
+  margin: 0;
+  list-style-type: none;
+  li {
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.vasion-sub-nav {
+  min-width: $sub-nav-width;
+  background-color: $grey-50;
+  border-right: 1px solid $grey-100;
+}
+
+.vasion-sub-nav-list {
+  padding: 0 10px 0 10px;
+  font-size: 14px;
+  color: $grey-400;
+  font-family: $font-family-book;
+  border-radius: 4px;
+  > li:hover {
+    background-color: $orange-50;
+    color: $orange-300;
+    font-family: Gotham Medium;
+    cursor: pointer;
+  }
+}
+
+
+.vasion-sub-nav-active {
+  width: auto;
+  height: 40px;
+  border-radius: 4px;
+  background-color: $orange-50;
+  font-family: $font-family-medium;
+  color: $orange-300; 
+}
+
+
+.vasion-sub-menu-header {
+  font-size: 12px;
+  font-family: $font-family-bold;
+  margin: 18px 11px 18px 11px;
+  color: $grey-400;
+}
+
+.vasion-sub-mainmenu-header {
+  font-size: 12px;
+  font-family: $font-family-bold;
+  margin: 18px 11px 18px 11px;
+  color: $grey-300;
+}
+
+.vasion-run-report {
+  margin-right: 0 !important;
+}
+
+.vasion-html-table-default {
+  table {
+    width: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+  }
+
+  thead {
+    background-color: $grey-100;
+  }
+
+  th {
+    height: 40px;
+  }
+
+  tr {
+    height: 40px;
+  }
+
+  tr:hover {
+    background-color: $orange-50;
+  }
+}
+
+.md-select-menu {
+  z-index: 2000 !important;
+  width: auto;
+  // max-width: none;
+}
+
+.md-datepicker-dialog {
+  z-index: 50 !important;
+}
+.vasion-no-width {
+  position: fixed;
+  width: 0;
+  height: 0;
+}
+
+.vasion-menuDivHeight {
+  max-height: none;
+  height: auto;
+}
+
+.vasion-toolbar-divider {
+  width: 1px;
+  height: 24px;
+  background-color: $grey-100;
+  z-index: 4;
+  margin-top: 8px;
+}
+
+.vasion-lightest-gray-background {
+    background-color: $grey-50;
+}
+
+.vasion-cursor {
+  cursor: pointer;
+}
+
+.vasion-white-background {
+  background-color: $white;
+}
+
+.vasion-li-vertical-spacer {
+  height: 8px;
+}
+
+.vasion-styled-ul {
+  list-style-type: none;
+  height: calc(100% - 70px);
+  overflow: auto;
+  padding: 0;
+}
+
+.vasion-mr-15 {
+  margin-right: 15px;
+}
+
+.vasion-styled-li-div {
+  border-radius: 4px;
+  min-height: 40px;
+  border: solid 1px $grey-100;
+  background-color: $grey-50;
+  color: $grey-400;
+  font-size: 16px;
+  font-family: Gotham Book;
+  padding: 6px 8px 0 8px;
+  fill: $grey-400;
+}
+
+.vasion-whiteBackground {
+  background-color: $white;
+}
+
+.vasion-greyBackground {
+  background-color: $grey-50;
+}
+
+.vasion-collapsable-section-header {
+  margin-top: 20px;
+  width: 100%;
+
+  .subheader {
+    @include SubHeadline;
+
+    width: 220px;
+    display: block;
+    float: left;
+  }
+}
+
+.vasion-run-report-prompt {
+  margin-top: 75px;
+  width: 100%;
+  text-align: center;
+}
+
+@mixin hover-active {
+  box-shadow: 0 3px 1px -2px #00000052, 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.vasion-icon-card {
+  width: fit-content;
+  cursor: pointer;
+  margin-right: 10px;
+  :hover{
+    @include hover-active;
+  }
+}
+
+.vasion-activeprovider {
+  @include hover-active;
+}
+
+.vasion-styled-li-div:hover {
+  cursor: pointer;
+  background-color: $grey-100;
+}
+
+.vasion-error-text {
+  color: red;
+  font-weight: bold;
+}
+
+button {
+  font-family: $font-family-medium;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .3s ease;
+}
+
+.component-fade-enter, .component-fade-leave-to
+/* .component-fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+.md-icon-button {
+  z-index: 4 !important;
+}
+.md-button {
+  z-index: 4;
+}
+
+.vasion-button-plus {
+  font-size: 22px;
+  margin-right: 10px;
+  line-height: 35px;
+  vertical-align: middle;
+}
+
+.vasion-required-indicator {
+  position: relative;
+  left: 3px;
+}
+
+/***** Override File Pond Styles for drag and drop functionality *****/
+
+.new-document .filepond--root {
+  height: 200px !important;
+}
+
+.new-document .filepond-panel-root {
+  background-color:white;
+}
+
+.new-document .filepond--label-action {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: solid 1px $orange-300;
+  background-color: rgba(255, 255, 255, 0.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gotham Medium";
+  font-size: 14px !important;
+  font-weight: 500;
+  text-decoration: none !important;
+  line-height: 0.71;
+  color: $orange-300;
+  margin-top: 10px;
+
+  &:hover, &:focus {
+    background-color: $orange-50 !important;
+  }
+}
+
+.new-document .filepond--drop-label
+{
+  height: 200px !important;
+}
+
+.new-document .filepond-drag {
+  font-family: "Gotham Medium";
+  font-size: 20px !important;
+  color: $grey-400;
+}
+
+.new-document .filepond-drag-or {
+  font-family: "Gotham Medium";
+  font-size: 12px !important;
+  color: $grey-400;
+}
+
+.new-logo .filepond--label-action {
+  position: relative;
+  top: 17px;
+  margin-left: 8px;
+  padding: 13px;
+  text-decoration: none;
+  width: 86px;
+  display: inline-block;
+  height: 36px;
+  border-radius: 6px;
+  font-family: $font-family-book !important;
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.71;
+  letter-spacing: normal;
+  text-align: center;
+  z-index: 4;
+  background-color: $orange-300;
+  
+  &:hover, &:focus {
+    background-color: $orange-400 !important;
+  }
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #b3b3b3;
+  border-radius: 25px;
+}
+
+.md-radio.md-theme-default .md-radio-container {
+  border-color: $orange-300 !important;
+}
+
+/***** Override Scoped Styles *****/
+
+#choose-subfolder-button.vasion-button > button.md-button {
+  margin-left: 0;
+}
